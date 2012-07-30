@@ -1,0 +1,106 @@
+body, p, h1, h2, h3, h4, table, td, th, ul, ol, textarea, input, div {
+  font-family: arial,verdana,helvetica,sans-serif; }
+
+#question-modal {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-align: center;
+  display: none; }
+  #question-modal.show {
+    display: block; }
+  #question-modal ol {
+    list-style-type: upper-alpha; }
+  #question-modal ol.wrong .answer {
+    border: 5px solid red; }
+  #question-modal ol.correct .answer {
+    border: 5px solid green; }
+  #question-modal .close {
+    float: right;
+    margin-right: 20px; }
+  #question-modal .value {
+    font-size: 20px; }
+  #question-modal .question-text {
+    font-size: 28px;
+    margin: 10px 0; }
+  #question-modal ol {
+    margin-left: auto;
+    margin-right: auto;
+    width: 720px; }
+    #question-modal ol li {
+      float: left;
+      width: 300px;
+      text-align: center;
+      height: 80px;
+      border: 3px solid black;
+      border-radius: 25px;
+      margin: 10px 10px;
+      font-size: 20px;
+      line-height: 60px; }
+      #question-modal ol li:hover {
+        border: 3px solid yellow; }
+
+#game-board {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%; }
+  #game-board h2 {
+    font-size: 30px; }
+  #game-board td {
+    width: 25%;
+    text-align: center;
+    padding: 20px 0; }
+    #game-board td div.question {
+      display: none; }
+    #game-board td div.value {
+      border-radius: 25px;
+      box-shadow: 10px 10px 5px #888888;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      width: 80%;
+      height: 60px;
+      line-height: 68px;
+      font-weight: bold;
+      font-size: 26px; }
+      #game-board td div.value:hover {
+        color: yellow; }
+    #game-board td:nth-child(1) div.value {
+      background: #4DFFD2; }
+    #game-board td:nth-child(2) div.value {
+      background: #D19D00; }
+    #game-board td:nth-child(3) div.value {
+      background: #FFC30F; }
+    #game-board td:nth-child(4) div.value {
+      background: #FF794D; }
+  #game-board.hide {
+    display: none; }
+
+#score-board {
+  margin-top: 60px;
+  margin-bottom: 40px; }
+  #score-board ul {
+    overflow: hidden;
+    list-style-type: none; }
+  #score-board li {
+    background: black;
+    float: left;
+    width: 100px;
+    height: 80px; }
+    #score-board li span {
+      vertical-align: middle;
+      font-weight: bold;
+      font-size: 20px;
+      width: 100%;
+      text-align: center;
+      color: white;
+      display: block;
+      padding: 3px 0; }
+    #score-board li div {
+      vertical-align: middle;
+      position: relative;
+      top: 8px; }
+    #score-board li.selected .team-name {
+      text-decoration: underline; }
+    #score-board li .team-name:hover {
+      color: yellow; }

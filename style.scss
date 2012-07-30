@@ -1,0 +1,144 @@
+body,p,h1,h2,h3,h4,table,td,th,ul,ol,textarea,input,div
+{
+font-family:arial,verdana,helvetica,sans-serif;
+}
+
+#question-modal {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-align: center;
+  display: none;
+  &.show {
+    display: block;
+  }
+  
+  ol {
+    list-style-type: upper-alpha;
+  }
+  
+  ol.wrong .answer {
+    border: 5px solid red;
+  }
+  
+  ol.correct .answer {
+    border: 5px solid green;
+  }
+  
+  .close {
+    float: right;
+    margin-right: 20px;
+  }
+  
+  .value {
+    font-size: 20px;
+  }
+  
+  .question-text {
+    font-size: 28px;
+    margin: 10px 0;
+  }
+  
+  ol {
+    margin-left: auto;
+    margin-right: auto;
+    width: 720px;
+    li {
+      float: left;
+      width: 300px;
+      text-align: center;
+      height: 80px;
+      border: 3px solid black;
+      border-radius:25px;
+      margin: 10px 10px;
+      font-size: 20px;
+      line-height: 60px;
+      &:hover {
+        border: 3px solid yellow;
+      };
+    }
+  }
+} // end #question-modal
+
+#game-board {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  h2 {
+    font-size: 30px;
+  }
+  td {
+    width: 25%;
+    text-align: center;
+    padding: 20px 0;
+    div.question {
+      display: none;
+    }
+    div.value {
+      border-radius:25px;
+      box-shadow: 10px 10px 5px #888888;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      width: 80%;
+      height: 60px;
+      line-height: 68px;
+      font-weight: bold;
+      font-size: 26px;
+      &:hover {
+        color: yellow;
+      };
+    }
+    &:nth-child(1) div.value {
+      background: #4DFFD2;
+    }
+    &:nth-child(2) div.value {
+      background: #D19D00;
+    }
+    &:nth-child(3) div.value {
+      background: #FFC30F;
+    }
+    &:nth-child(4) div.value {
+      background: #FF794D;
+    }
+  }
+  &.hide {
+    display: none;
+  }
+} // end #game-board
+
+#score-board {
+  margin-top: 60px;
+  margin-bottom: 40px;
+  ul {
+    overflow: hidden;
+    list-style-type: none;
+  }
+  li {
+    background: black;
+    float: left;
+    width: 100px;
+    height: 80px;
+    span {
+      vertical-align: middle;
+      font-weight: bold;
+      font-size: 20px;
+      width: 100%;
+      text-align: center;
+      color: white;
+      display: block;
+      padding: 3px 0;
+    }
+    div {
+      vertical-align: middle;
+      position: relative; // hack for now, don't know how to vertical align
+      top: 8px;
+    }
+    &.selected .team-name {
+      text-decoration:underline
+    }
+    .team-name:hover {
+      color: yellow;
+    };
+  }
+} // end #score-board
